@@ -1,0 +1,3 @@
+import quandl
+quandl.save_key("vsWryznSzB9MQFg5X-ug")
+print(quandl.ApiConfig.api_key)
