@@ -5,8 +5,8 @@ import os
 
 quandl.read_key()
 
-city = input('City name:')
-state = input('State code:')
+city = 'New York City'
+state = 'NY'
 
 city_zipcodes = zipcodes.filter_by(city=city, state=state)
 city_zips = []
@@ -17,12 +17,11 @@ dir_exists = os.path.exists(f"{city}_{state}")
 path = os.path.join(f"{city}_{state}")
 
 num_of_zips = len(city_zips)
+print(f"There are {num_of_zips} zipcodes in {city}, {state}")
 
 if num_of_zips == 0:
     print('There are no zip codes in your search...')
 elif num_of_zips > 0:
-
-    print(f"There are {num_of_zips} zipcodes in {city}, {state}")
 
     if dir_exists:
         print('No need to create a new directory...')

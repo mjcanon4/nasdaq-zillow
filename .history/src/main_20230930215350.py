@@ -5,8 +5,8 @@ import os
 
 quandl.read_key()
 
-city = input('City name:')
-state = input('State code:')
+city = 'New York City'
+state = 'NY'
 
 city_zipcodes = zipcodes.filter_by(city=city, state=state)
 city_zips = []
